@@ -16,7 +16,7 @@ export default function Header() {
       className="container sticky top-0 z-[999999]"
       ref={headerRef}
     >
-      <div className="bg-white text-[18px] py-[15px] px-5">
+      <div className="bg-white text-[18px] py-[15px] px-5 shadow-2xl">
         <div className="flex justify-between items-center gap-[10px]">
           {/* ========== logo ============ */}
           <div>
