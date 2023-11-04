@@ -19,7 +19,7 @@ body {
 
 .active {
   color: #c10000;
-  border-bottom: solid 3px #c10000;
+  /* border-bottom: solid 3px #c10000; */
 }
 
 .hamburger {

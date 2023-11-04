@@ -7,8 +7,13 @@ function OfferingCard({ data }) {
         width={500}
         height={400}
         alt=""
-        className="w-full h-auto rounded-[5px]"
+        className="w-full h-[200px] rounded-[5px]"
       />
+      {data.paidOff && (
+        <div className="btn bg-grayColor text-black font-[600] text-center text-opacity-60 rounded-[5px] cursor-pointer">
+          PAID OFF {data.paidOff}
+        </div>
+      )}
       <p className="text-[#4792b0] leading-[20px] text-[16px] font-[500]">
         {data.info}
       </p>
@@ -80,12 +85,23 @@ function OfferingCard({ data }) {
         </div>
       </div>
       <div className="flex flex-col gap-[10px]">
-        <h2 className="text-[18px] font-[500] opacity-50">
-          Pledged <span>{data.pledged}%</span>
-        </h2>
-        <div className="bg-grayColor w-full h-[1rem] flex items-center px-[5px] rounded-[2px]">
-          <div className="bg-secondaryColor h-[60%] w-[50%] rounded-[2px]"></div>
+        <div className="flex gap-[1rem]">
+          {data.funded && (
+            <h2 className="text-[18px] font-[500] opacity-50">
+              Funded <span>{data.funded}%</span>
+            </h2>
+          )}
+          <h2 className="text-[18px] font-[500] opacity-50">
+            Pledged <span>{data.pledged}%</span>
+          </h2>
         </div>
+        <div className="bg-grayColor w-full h-[12px] flex items-center px-[5px] rounded-[2px]">
+          <div
+            style={{ width: `${data.pledged}%` }}
+            className="bg-secondaryColor h-[60%] rounded-[2px]"
+          ></div>
+        </div>
+
         <div className="flex justify-between gap-[10px] mt-[1rem]">
           <button className="btn rounded-[5px] bg-blueColor">Follow</button>
           <button className="btn rounded-[5px]">Pledge Today</button>
