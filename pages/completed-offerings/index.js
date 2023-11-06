@@ -1,6 +1,7 @@
 import OfferingCard from "@/components/OfferingCard";
 import { offeringData } from "../../data/offeringData";
-import { useState } from "react";
+import { Fragment, useState } from "react";
+import Head from "next/head";
 import { useTheme } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import OutlinedInput from "@mui/material/OutlinedInput";
@@ -100,149 +101,154 @@ export default function CompletedOfferings() {
     );
   };
   return (
-    <div className="container py-[3rem] md:py-[5rem] px-[10px]">
-      <form className="mb-[2rem] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 place-items-center">
-        {/* =========== position ============== */}
-        <div>
-          <FormControl sx={{ m: 1, width: 200 }}>
-            <InputLabel id="position">Lien position</InputLabel>
-            <Select
-              labelId="position"
-              id="positionId"
-              multiple
-              value={lienPosition}
-              onChange={handlePositionChange}
-              input={<OutlinedInput id="positionId" label="Lien position" />}
-              renderValue={(selected) => (
-                <Box sx={{ display: "flex", flexWrap: "wrap", gap: 0.5 }}>
-                  {selected.map((value) => (
-                    <Chip key={value} label={value} />
-                  ))}
-                </Box>
-              )}
-              MenuProps={MenuProps}
-            >
-              {positions.map((position) => (
-                <MenuItem
-                  key={position}
-                  value={position}
-                  style={getStyles(position, lienPosition, theme)}
-                >
-                  {position}
-                </MenuItem>
-              ))}
-            </Select>
-          </FormControl>
-        </div>
+    <Fragment>
+      <Head>
+        <title>Completed Offerings | MNAZ</title>
+      </Head>
+      <div className="container py-[3rem] md:py-[5rem] px-[10px]">
+        <form className="mb-[2rem] grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 place-items-center">
+          {/* =========== position ============== */}
+          <div>
+            <FormControl sx={{ m: 1, width: 200 }}>
+              <InputLabel id="position">Lien position</InputLabel>
+              <Select
+                labelId="position"
+                id="positionId"
+                multiple
+                value={lienPosition}
+                onChange={handlePositionChange}
+                input={<OutlinedInput id="positionId" label="Lien position" />}
+                renderValue={(selected) => (
+                  <Box sx={{ display: "flex", flexWrap: "wrap", gap: 0.5 }}>
+                    {selected.map((value) => (
+                      <Chip key={value} label={value} />
+                    ))}
+                  </Box>
+                )}
+                MenuProps={MenuProps}
+              >
+                {positions.map((position) => (
+                  <MenuItem
+                    key={position}
+                    value={position}
+                    style={getStyles(position, lienPosition, theme)}
+                  >
+                    {position}
+                  </MenuItem>
+                ))}
+              </Select>
+            </FormControl>
+          </div>
 
-        {/* ============= property ========= */}
-        <div>
-          <FormControl sx={{ m: 1, width: 200 }}>
-            <InputLabel id="property">Property type</InputLabel>
-            <Select
-              labelId="property"
-              id="propertyId"
-              multiple
-              value={propertyType}
-              onChange={handlePropertyChange}
-              input={<OutlinedInput id="propertyId" label="Property type" />}
-              renderValue={(selected) => (
-                <Box sx={{ display: "flex", flexWrap: "wrap", gap: 0.5 }}>
-                  {selected.map((value) => (
-                    <Chip key={value} label={value} />
-                  ))}
-                </Box>
-              )}
-              MenuProps={MenuProps}
-            >
-              {properties.map((property) => (
-                <MenuItem
-                  key={property}
-                  value={property}
-                  style={getStyles(property, propertyType, theme)}
-                >
-                  {property}
-                </MenuItem>
-              ))}
-            </Select>
-          </FormControl>
-        </div>
+          {/* ============= property ========= */}
+          <div>
+            <FormControl sx={{ m: 1, width: 200 }}>
+              <InputLabel id="property">Property type</InputLabel>
+              <Select
+                labelId="property"
+                id="propertyId"
+                multiple
+                value={propertyType}
+                onChange={handlePropertyChange}
+                input={<OutlinedInput id="propertyId" label="Property type" />}
+                renderValue={(selected) => (
+                  <Box sx={{ display: "flex", flexWrap: "wrap", gap: 0.5 }}>
+                    {selected.map((value) => (
+                      <Chip key={value} label={value} />
+                    ))}
+                  </Box>
+                )}
+                MenuProps={MenuProps}
+              >
+                {properties.map((property) => (
+                  <MenuItem
+                    key={property}
+                    value={property}
+                    style={getStyles(property, propertyType, theme)}
+                  >
+                    {property}
+                  </MenuItem>
+                ))}
+              </Select>
+            </FormControl>
+          </div>
 
-        {/* ========= yield ========= */}
-        <div>
-          <FormControl sx={{ m: 1, width: 200 }}>
-            <InputLabel id="Yield">Yield</InputLabel>
-            <Select
-              labelId="Yield"
-              id="YieldId"
-              multiple
-              value={yields}
-              onChange={handleYieldChange}
-              input={<OutlinedInput id="YieldId" label="Yield" />}
-              renderValue={(selected) => (
-                <Box sx={{ display: "flex", flexWrap: "wrap", gap: 0.5 }}>
-                  {selected.map((value) => (
-                    <Chip key={value} label={value} />
-                  ))}
-                </Box>
-              )}
-              MenuProps={MenuProps}
-            >
-              {yieldData.map((data) => (
-                <MenuItem
-                  key={data}
-                  value={data}
-                  style={getStyles(data, propertyType, theme)}
-                >
-                  {data}
-                </MenuItem>
-              ))}
-            </Select>
-          </FormControl>
-        </div>
+          {/* ========= yield ========= */}
+          <div>
+            <FormControl sx={{ m: 1, width: 200 }}>
+              <InputLabel id="Yield">Yield</InputLabel>
+              <Select
+                labelId="Yield"
+                id="YieldId"
+                multiple
+                value={yields}
+                onChange={handleYieldChange}
+                input={<OutlinedInput id="YieldId" label="Yield" />}
+                renderValue={(selected) => (
+                  <Box sx={{ display: "flex", flexWrap: "wrap", gap: 0.5 }}>
+                    {selected.map((value) => (
+                      <Chip key={value} label={value} />
+                    ))}
+                  </Box>
+                )}
+                MenuProps={MenuProps}
+              >
+                {yieldData.map((data) => (
+                  <MenuItem
+                    key={data}
+                    value={data}
+                    style={getStyles(data, propertyType, theme)}
+                  >
+                    {data}
+                  </MenuItem>
+                ))}
+              </Select>
+            </FormControl>
+          </div>
 
-        {/* =========== amount =========== */}
-        <div>
-          <FormControl sx={{ m: 1, width: 200 }}>
-            <InputLabel id="loan">loan Amount</InputLabel>
-            <Select
-              labelId="loan"
-              id="loanId"
-              multiple
-              value={loanAmount}
-              onChange={handleLoanChange}
-              input={<OutlinedInput id="loanId" label="loan Amount" />}
-              renderValue={(selected) => (
-                <Box sx={{ display: "flex", flexWrap: "wrap", gap: 0.5 }}>
-                  {selected.map((value) => (
-                    <Chip key={value} label={value} />
-                  ))}
-                </Box>
-              )}
-              MenuProps={MenuProps}
-            >
-              {amount.map((data) => (
-                <MenuItem
-                  key={data}
-                  value={data}
-                  style={getStyles(data, propertyType, theme)}
-                >
-                  {data}
-                </MenuItem>
-              ))}
-            </Select>
-          </FormControl>
-        </div>
+          {/* =========== amount =========== */}
+          <div>
+            <FormControl sx={{ m: 1, width: 200 }}>
+              <InputLabel id="loan">loan Amount</InputLabel>
+              <Select
+                labelId="loan"
+                id="loanId"
+                multiple
+                value={loanAmount}
+                onChange={handleLoanChange}
+                input={<OutlinedInput id="loanId" label="loan Amount" />}
+                renderValue={(selected) => (
+                  <Box sx={{ display: "flex", flexWrap: "wrap", gap: 0.5 }}>
+                    {selected.map((value) => (
+                      <Chip key={value} label={value} />
+                    ))}
+                  </Box>
+                )}
+                MenuProps={MenuProps}
+              >
+                {amount.map((data) => (
+                  <MenuItem
+                    key={data}
+                    value={data}
+                    style={getStyles(data, propertyType, theme)}
+                  >
+                    {data}
+                  </MenuItem>
+                ))}
+              </Select>
+            </FormControl>
+          </div>
 
-        <button className="btn rounded-[5px] w-[200px] sm:w-fit h-fit py-[13px]">
-          FILTER
-        </button>
-      </form>
-      <div className="flex flex-wrap gap-4 w-full justify-evenly">
-        {offeringData.map((data) => (
-          <OfferingCard key={data.id} data={data} />
-        ))}
+          <button className="btn rounded-[5px] w-[200px] sm:w-fit h-fit py-[13px]">
+            FILTER
+          </button>
+        </form>
+        <div className="flex flex-wrap gap-4 w-full justify-evenly">
+          {offeringData.map((data) => (
+            <OfferingCard key={data.id} data={data} />
+          ))}
+        </div>
       </div>
-    </div>
+    </Fragment>
   );
 }
