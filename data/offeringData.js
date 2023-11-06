@@ -195,3 +195,5 @@ export const paidOfferings = [
     paidOff: "Oct 12, 2022",
   },
 ];
+
+export const blogData = []
