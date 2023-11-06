@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BsGoogle } from "react-icons/bs";
+import { FaFacebookF } from "react-icons/fa";
 import Link from "next/link";
 import Box from "@mui/material/Box";
 import InputLabel from "@mui/material/InputLabel";
@@ -9,14 +9,19 @@ import Select from "@mui/material/Select";
 
 function Signup() {
   const [role, setRole] = useState("");
+  const [showPassword, setShowPassword] = useState(true);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(true);
 
   const handleChange = (event) => {
     setRole(event.target.value);
   };
-  const [showPassword, setShowPassword] = useState(false);
 
   const togglePassword = () => {
     setShowPassword(!showPassword);
+  };
+
+  const toggleConfirmPassword = () => {
+    setShowConfirmPassword(!showConfirmPassword);
   };
 
   return (
@@ -25,8 +30,8 @@ function Signup() {
         <div className="flex flex-col gap-[10px]">
           <p className="text-[16px] font-[400]">Connect using</p>
           <div className="bg-secondaryColor flex gap-[1rem] items-center p-[12px] cursor-pointer">
-            <BsGoogle className="w-[25px] h-[25px] text-primaryColor" />
-            <p className="text-[18px] font-[500] text-primaryColor">Google</p>
+            <FaFacebookF className="w-[25px] h-[25px] text-primaryColor" />
+            <p className="text-[18px] font-[500] text-primaryColor">Facebook</p>
           </div>
         </div>
         <div className="flex flex-col gap-[1rem] my-[2rem]">
@@ -62,18 +67,34 @@ function Signup() {
             placeholder="Phone Number"
             className="p-[13px] placeholder:text-secondaryColor border-[2px] outline-none border-grayColor focus:bg-gray-100"
           />
-          <input
-            type="password"
-            required
-            placeholder="Password"
-            className="p-[13px] placeholder:text-secondaryColor border-[2px] outline-none border-grayColor focus:bg-gray-100"
-          />
-          <input
-            type="password"
-            required
-            placeholder="Confirm Password"
-            className="p-[13px] placeholder:text-secondaryColor border-[2px] outline-none border-grayColor focus:bg-gray-100"
-          />
+          <div className="w-full relative flex items-center">
+            <input
+              type={showPassword ? "password" : "text"}
+              required
+              placeholder="Password"
+              className="w-full p-[13px] placeholder:text-secondaryColor border-[2px] outline-none border-grayColor focus:bg-gray-100"
+            />
+            <span
+              className="cursor-pointer absolute right-0 px-[15px] border-l-[2px] border-l-grayColor"
+              onClick={togglePassword}
+            >
+              {showPassword ? "Show" : "Hide"}
+            </span>
+          </div>
+          <div className="w-full relative flex items-center">
+            <input
+              type={showConfirmPassword ? "password" : "text"}
+              required
+              placeholder="Confirm Password"
+              className="w-full p-[13px] placeholder:text-secondaryColor border-[2px] outline-none border-grayColor focus:bg-gray-100"
+            />
+            <span
+              className="cursor-pointer absolute right-0 px-[15px] border-l-[2px] border-l-grayColor"
+              onClick={toggleConfirmPassword}
+            >
+              {showConfirmPassword ? "Show" : "Hide"}
+            </span>
+          </div>
           <div className="">
             <Box sx={{ minWidth: 120 }}>
               <FormControl fullWidth>

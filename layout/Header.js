@@ -237,7 +237,7 @@ export default function Header() {
 
           {/* =========== right header =========== */}
           <div className="flex items-center gap-[10px] sm:gap-[30px]">
-            <Link href="/login">
+            <Link href="/signin">
               <button className="border-[3px] border-secondaryColor px-[15px] py-[7px] font-[500] text-[15px]">
                 Log In
               </button>
