@@ -1,5 +1,6 @@
 import { Fragment } from "react";
 import Head from "next/head";
+import Link from "next/link";
 export default function Home() {
   return (
     <Fragment>
@@ -14,12 +15,16 @@ export default function Home() {
               Find, Pledge and Buy High Yield California Trust Deeds
             </p>
             <div className="flex flex-col sm:flex-row gap-[1rem] mt-4">
-              <button className="border-[3px] border-secondaryColor text-[15px] font-[500] py-[5px] px-[10px] text-white">
-                How it works
-              </button>
-              <button className="btn rounded-[5px] text-white">
-                Register as an investor
-              </button>
+              <Link href="/how-it-works">
+                <button className="border-[3px] border-secondaryColor text-[15px] font-[500] py-[10px] px-[10px] text-white">
+                  How it works
+                </button>
+              </Link>
+              <Link href="/sign-up">
+                <button className="btn rounded-[5px] text-white">
+                  Register as an investor
+                </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -131,18 +136,22 @@ export default function Home() {
             <h1 className="text-[18px] font-[700] text-primaryColor">
               AVAILABLE OFFERINGS
             </h1>
-            <button className="text-[16px] font-[500] border-[2px] text-primaryColor border-secondaryColor p-[15px] rounded-[5px] hover:bg-secondaryColor transition-all duration-300">
-              CHECK OFFERINGS
-            </button>
+            <Link href="/available-offerings">
+              <button className="text-[16px] font-[500] border-[2px] text-primaryColor border-secondaryColor p-[15px] rounded-[5px] hover:bg-secondaryColor transition-all duration-300">
+                CHECK OFFERINGS
+              </button>
+            </Link>
           </div>
 
           <div className="w-full max-w-[400px] flex flex-col gap-[1rem] items-center justify-center h-[20rem] bg-blueColor rounded-[5px]">
             <h1 className="text-[18px] font-[700] text-primaryColor">
               REACH OUT TO US
             </h1>
-            <button className="text-[16px] font-[500] border-[2px] text-primaryColor border-secondaryColor p-[15px] rounded-[5px] hover:bg-secondaryColor transition-all duration-300">
-              VIEW CONTACT INFO
-            </button>
+            <Link href="/contact">
+              <button className="text-[16px] font-[500] border-[2px] text-primaryColor border-secondaryColor p-[15px] rounded-[5px] hover:bg-secondaryColor transition-all duration-300">
+                VIEW CONTACT INFO
+              </button>
+            </Link>
           </div>
         </div>
 

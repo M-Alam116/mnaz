@@ -21,9 +21,13 @@ function Borrow() {
         <div className="flex flex-col justify-center items-center py-[2rem] w-full md:w-[60%] mx-auto gap-[8px] px-[10px]">
           <p className="text-[16px] font-[500] opacity-80 leading-[25px]">
             Should you need a 12-24 month bridge loan,{" "}
-            <Link href="/" className="text-blue-800">
+            <Link
+              href="https://mortgagevintage.com/"
+              target="_blank"
+              className="text-blue-800"
+            >
               click here
-            </Link>{" "}
+            </Link>
             to Request-a-Quote from MNAZ and you will be directed to a broker or
             lender that specializes in your hard money loan scenario.
           </p>
@@ -33,7 +37,8 @@ function Borrow() {
             borrowers looking to capitalize on market opportunities.
           </p>
           <Link
-            href="/"
+            href="https://mortgagevintage.com/brokers/hard-money-loan-programs/"
+            target="_blank"
             className="text-[16px] font-[500] opacity-80 leading-[25px] text-blue-800"
           >
             Click to View Current Hard Money Loan
@@ -44,7 +49,9 @@ function Borrow() {
           <h1 className="text-[20px] font-[500] text-center">
             We're here to help you Earn Money!
           </h1>
-          <button className="btn">Ask how we do it</button>
+          <Link href="/how-it-works" target="_blank">
+            <button className="btn">Ask how we do it</button>
+          </Link>
         </div>
       </div>
     </Fragment>

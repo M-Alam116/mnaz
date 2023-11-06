@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Fragment } from "react";
+import Link from "next/link";
 import Head from "next/head";
 function Sell() {
   return (
@@ -155,7 +156,9 @@ function Sell() {
               Title, escrow and closing charges are not included in the
               marketplace fee.
             </p>
-            <button className="btn mt-[2rem]">Start Selling</button>
+            <Link href="/start-selling">
+              <button className="btn mt-[2rem]">Start Selling</button>
+            </Link>
           </div>
           <div className="lg:col-span-1 order-1 lg:order-2 w-full">
             <Image

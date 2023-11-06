@@ -24,13 +24,19 @@ export default function Footer() {
         <div className="flex flex-col gap-[5px] justify-center items-center">
           <h1 className="text-[20px] font-[700]">Follow Us</h1>
           <div className="flex gap-[10px]">
-            <Link href="/">
+            <Link
+              href="https://www.facebook.com/crowdtrustdeed"
+              target="_blank"
+            >
               <FaFacebookSquare className="w-[32px] h-[35px] text-secondaryColor cursor-pointer" />
             </Link>
-            <Link href="/">
+            <Link
+              href="https://www.linkedin.com/company/crowdtrustdeed/"
+              target="_blank"
+            >
               <FaLinkedin className="w-[32px] h-[35px] text-secondaryColor cursor-pointer" />
             </Link>
-            <Link href="/">
+            <Link href="https://twitter.com/CrowdTrustDeed" target="_blank">
               <FaTwitterSquare className="w-[32px] h-[35px] text-secondaryColor cursor-pointer" />
             </Link>
           </div>
