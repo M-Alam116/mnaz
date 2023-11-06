@@ -74,13 +74,32 @@ body {
   z-index: -1;
 }
 
+.sellBg {
+  position: relative;
+}
+
+.sellBg::before {
+  content: "";
+  background-image: url("/images/sell.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  filter: brightness(30%);
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
 @layer components {
   .container {
     @apply max-w-full w-[1440px] mx-auto;
   }
 
   .btn {
-    @apply bg-secondaryColor py-[13px] px-[35px] text-white text-[15px] font-[500] rounded-[60px];
+    @apply bg-secondaryColor py-[13px] px-[35px] text-white text-[15px] font-[500] rounded-[5px];
   }
 
   .heading {
