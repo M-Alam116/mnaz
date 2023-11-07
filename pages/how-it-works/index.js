@@ -18,7 +18,7 @@ function HowItWorks() {
         <title>Investing in Trust Deeds in California | MNAZ</title>
       </Head>
       <div className="container">
-        {/* =========== sell background ========== */}
+        {/* =========== HowItWorks background ========== */}
         <div className="howItWorkBg">
           <div className="flex flex-col justify-center items-center text-center px-[10px] h-[30rem] md:h-[30rem]">
             <div className="bg-secondaryColor text-primaryColor text-[28px] font-[600] opacity-90 py-[12px] px-[20px]">
