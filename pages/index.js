@@ -22,7 +22,7 @@ export default function Home() {
               </Link>
               <Link href="/sign-up">
                 <button className="btn rounded-[5px] text-white">
-                  Register as an investor
+                  Register
                 </button>
               </Link>
             </div>

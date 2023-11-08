@@ -188,6 +188,82 @@ body {
   z-index: -1;
 }
 
+.whoCanInvestBg {
+  position: relative;
+}
+
+.whoCanInvestBg::before {
+  content: "";
+  background-image: url("/images/who-can-invest.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  filter: brightness(30%);
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.whyMNAZBg {
+  position: relative;
+}
+
+.whyMNAZBg::before {
+  content: "";
+  background-image: url("/images/whyMNAZ.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  filter: brightness(30%);
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.TrustDeedBg {
+  position: relative;
+}
+
+.TrustDeedBg::before {
+  content: "";
+  background-image: url("/images/trust.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  filter: brightness(30%);
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.faqBg {
+  position: relative;
+}
+
+.faqBg::before {
+  content: "";
+  background-image: url("/images/faq.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  filter: brightness(30%);
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
 @layer components {
   .container {
     @apply max-w-full w-[1440px] mx-auto;
