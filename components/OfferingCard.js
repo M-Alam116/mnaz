@@ -1,5 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/router";
 function OfferingCard({ data }) {
+  const router = useRouter();
+  const url = router.pathname;
   return (
     <div className="flex flex-col gap-[2rem] w-full max-w-[350px] border-[2px] border-grayColor rounded-[5px] py-[15px] px-[20px]">
       <Image
@@ -103,8 +107,12 @@ function OfferingCard({ data }) {
         </div>
 
         <div className="flex justify-between gap-[10px] mt-[1rem]">
-          <button className="btn rounded-[5px] bg-blueColor">Follow</button>
-          <button className="btn rounded-[5px]">Pledge Today</button>
+          <Link href={`/${url}/${data.id}`}>
+            <button className="btn rounded-[5px] bg-blueColor">Follow</button>
+          </Link>
+          <Link href={`/${url}/${data.id}`}>
+            <button className="btn rounded-[5px]">Pledge Today</button>
+          </Link>
         </div>
       </div>
     </div>
