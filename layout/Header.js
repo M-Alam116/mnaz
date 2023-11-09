@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
-import { BiMenu, BiSolidUserDetail } from "react-icons/bi";
+import { BiMenu } from "react-icons/bi";
 import { ImCross } from "react-icons/im";
 import { useRouter } from "next/router";
 export default function Header() {
@@ -111,7 +111,13 @@ export default function Header() {
                 <Link href="/how-it-works">
                   <li
                     className={
-                      router.pathname === "/how-it-works"
+                      router.pathname === "/how-it-works" ||
+                      router.pathname === "/how-to-pledge" ||
+                      router.pathname === "/what-you-should-know" ||
+                      router.pathname === "/who-can-invest" ||
+                      router.pathname === "/why-MNAZ" ||
+                      router.pathname === "/why-trust-deeds" ||
+                      router.pathname === "/frequently-asked-questions"
                         ? "active"
                         : "hover:text-secondaryColor"
                     }

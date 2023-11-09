@@ -316,6 +316,12 @@ body {
     animation: animate 0.7s;
   }
 
+  .open {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+
   @keyframes animate {
     0% {
       right: -15rem;

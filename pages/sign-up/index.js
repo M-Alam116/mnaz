@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { FaFacebookF } from "react-icons/fa";
+import { BsGoogle } from "react-icons/bs";
 import Link from "next/link";
 import Box from "@mui/material/Box";
 import InputLabel from "@mui/material/InputLabel";
@@ -40,6 +41,10 @@ function Signup() {
               <p className="text-[18px] font-[500] text-primaryColor">
                 Facebook
               </p>
+            </div>
+            <div className="bg-secondaryColor flex gap-[1rem] items-center p-[12px] cursor-pointer">
+              <BsGoogle className="w-[25px] h-[25px] text-primaryColor" />
+              <p className="text-[18px] font-[500] text-primaryColor">Google</p>
             </div>
           </div>
           <div className="flex flex-col gap-[1rem] my-[2rem]">
