@@ -12,22 +12,12 @@ function Contact() {
           <div className="bg-secondaryColor text-primaryColor py-[5px] px-[20px] rounded-[5px] text-[20px] font-[600] uppercase">
             Covering California
           </div>
-          <div className="">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3322.780570527191!2d-117.87573152578918!3d33.61099744090306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dce0893bbcb4c9%3A0xc5618041f6c6998a!2sCrowdTrustDeed!5e0!3m2!1sen!2s!4v1699279281168!5m2!1sen!2s"
-              width="350"
-              height="350"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
           <ul>
             <li className="text-[16px] font-[400]">
               2801 B Street #193, San Diego CA 92102.
             </li>
             <li className="text-[16px] font-[400] text-secondaryColor">
-              (310) 494-6629
+              619-732-6616
             </li>
             <li className="text-[16px] font-[400] text-secondaryColor">
               info@mnaz.com

@@ -15,7 +15,7 @@ export default function Footer() {
         <div className="flex flex-col gap-[5px] justify-center items-center">
           <h1 className="text-[20px] font-[700]">Contact Us</h1>
           <span className="text-[16px] font-[400] opacity-80">
-            <Link href="/">(310) 494-6629</Link> – Tap to call
+            <Link href="/">619-732-6616</Link> – Tap to call
           </span>
           <span className="text-[16px] font-[400] opacity-80">
             <Link href="/">info@MNAZ.com</Link> – Tap to message
